@@ -3,7 +3,7 @@ import random
 class GridWorld:
     def __init__(self, size=5):
         self.size = size
-        self.agent_pos = [0, 0]
+        self.agent_pos = [7, 7]
         self.goal_pos = [random.randint(0, size - 1), random.randint(0, size - 1)]
 
     def move_agent(self, direction):

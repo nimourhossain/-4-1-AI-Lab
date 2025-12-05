@@ -20,7 +20,7 @@ def objective_function(amounts):
         if nutrient_totals[i] < required_min[i]:
             penalty += (required_min[i] - nutrient_totals[i]) **2 *100
         if nutrient_totals[i] > required_max[i]:
-            penalty += (required_min[i] - nutrient_totals[i]) **2 *100     
+            penalty += (nutrient_totals[i] - required_max[i])**2 * 100     
             
     negative_penalty = sum(abs(min(0,a)) for a in amounts) *100
     return -(total_cost + penalty + negative_penalty)
